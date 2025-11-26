@@ -1,0 +1,314 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@keyframes fadein {
+    from {
+        transform: translateX(-200px);
+    }
+
+    to {
+        transform: translateX(0px);
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.title {
+    text-align: center;
+    background-color: aliceblue;
+    width: 700px;
+    border-radius: 50px;
+    border: 1px solid black;
+    margin: 10px auto;
+    box-shadow: rgba(0, 0, 0, 0.3);
+    padding: 10px;
+    font-family: 'Courier New', Courier, monospace;
+    transition: 2s;
+}
+
+.title:hover {
+    transform: scale(1.1);
+    z-index: 1;
+}
+
+nav {
+    background-color: #4b566b;
+    position: relative;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    padding: 20px 10px;
+}
+
+nav li {
+    list-style-type: none;
+    background-color: white;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid black;
+    width: 100px;
+    text-align: center;
+    transition: 1s;
+}
+
+nav li:hover {
+    transform: scale(1.5);
+}
+
+nav a {
+    text-decoration: none;
+    color: black;
+}
+
+.YT_div {
+    margin: auto;
+    width: max-content;
+    padding: 10px;
+}
+
+.YT_div iframe {
+    border-radius: 20px;
+}
+
+.YT_div iframe:hover {
+    transform: scale(1.1);
+}
+
+.bg_video {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    bottom: 0;
+    object-fit: cover;
+    position: fixed;
+    z-index: -1;
+}
+
+.main {
+    background-color: rgba(0, 0, 0, 0.2);
+    width: 1000px;
+    height: auto;
+    margin: auto;
+    padding: 50px;
+    border-radius: 50px;
+    overflow: hidden;
+}
+
+.Aboutus {
+    text-align: center;
+    margin: auto;
+    color: rgb(243, 238, 238);
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.About {
+    display: flex;
+    flex-wrap: wrap;
+    width: auto;
+    height: auto;
+    justify-content: space-between;
+    overflow: hidden;
+}
+
+.About .who_we_are {
+    background-color: rgba(0, 0, 0, 0.315);
+    width: 500px;
+    border-radius: 20px;
+    padding: 20px;
+    color: rgb(243, 238, 238);
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.Focus {
+    background-color: rgba(0, 0, 0, 0.315);
+    width: 300px;
+    height: 500px;
+    border-radius: 20px;
+    padding: 20px;
+    color: rgb(243, 238, 238);
+    font-family: 'Courier New', Courier, monospace;
+    scrollbar-width: thin;
+    scroll-behavior: smooth;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    text-align: center;
+}
+
+.Classification,
+.Airframes,
+.Avionics,
+.Propulsion,
+.Weapons,
+.Countermeasures,
+.jets {
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    width: 250px;
+    height: 100px;
+}
+
+.Classification img,
+.Airframes img,
+.Avionics img,
+.Propulsion img,
+.Weapons img,
+.Countermeasures img,
+.jets img {
+    width: 250px;
+    height: 100px;
+}
+
+.Classification p,
+.Airframes p,
+.Avionics p,
+.Propulsion p,
+.Weapons p,
+.Countermeasures p,
+.jets p {
+    position: absolute;
+    z-index: 2;
+    inset: 0;
+    margin: auto;
+    padding: 35px;
+    background-color: rgba(0, 0, 0, 0.4);
+    width: auto;
+    height: auto;
+    transition: 1s;
+    text-align: center;
+}
+
+.Classification p:hover,
+.Airframes p:hover,
+.Avionics p:hover,
+.Propulsion p:hover,
+.Weapons p:hover,
+.Countermeasures p:hover,
+.jets p:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+    transform: scale(1.4);
+}
+
+.mv {
+    width: 500px;
+    margin: auto;
+    font-family: 'Courier New', Courier, monospace;
+    color: rgb(243, 238, 238);
+    background-color: rgba(0, 0, 0, 0.315);
+    border-radius: 20px;
+    padding: 20px;
+    text-align: center;
+}
+
+.mv p {
+    margin-left: 70px;
+    margin-right: 70px;
+}
+
+.Fighter_classifications {
+    font-family: 'Courier New', Courier, monospace;
+    color: rgb(243, 238, 238);
+    text-align: center;
+}
+
+.types {
+    width: auto;
+    height: auto;
+    display: flex;
+    background-color: rgba(0, 0, 0, 0.315);
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.Air_Superiority,
+.Multirole,
+.Interceptors,
+.Carrier_based,
+.Stealth,
+.Trainers {
+    width: 150px;
+    height: 250px;
+    background-color: rgba(0, 0, 0, 0.3);
+    position: relative;
+    overflow: hidden;
+}
+
+.types img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    transition: 2s;
+}
+
+.Air_Superiority p,
+.Multirole p,
+.Interceptors p,
+.Carrier_based p,
+.Stealth p,
+.Trainers p {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: rgb(243, 238, 238);
+    z-index: 2;
+}
+
+.Air_Superiority p:hover+.ASF,
+.Multirole p:hover+.MF,
+.Interceptors p:hover+.INT,
+.Carrier_based p:hover+.CBF,
+.Stealth p:hover+.SF,
+.Trainers p:hover+.Train {
+    transform: scale(1.3);
+}
+
+.desc {
+    background-color: rgba(0, 0, 0, 0.315);
+    border-radius: 10px;
+    margin-top: 10px;
+    padding: 20px;
+    color: rgb(243, 238, 238);
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.desc h2 {
+    text-align: center;
+}
+
+.desc img {
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+}
+
+.Example {
+    display: flex;
+    overflow: hidden;
+    justify-content: center;
+    gap: 20px;
+    text-align: center;
+    width: auto;
+    height: auto;
+}
+
+.Example div {
+    width: 300px;
+    height: 250px;
+    overflow: hidden;
+    padding: 10px;
+}
